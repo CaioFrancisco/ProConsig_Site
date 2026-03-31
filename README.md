@@ -35,3 +35,8 @@ Instead of complex systems and long forms, the platform focuses on **speed, simp
 
 ```text
 User Input → Data Processing → WhatsApp Redirect → Human Service
+
+---
+
+This project is for portfolio purposes only.
+Unauthorized commercial use is not allowed.
