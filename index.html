@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ProConsig - Empréstimo Consignado</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="popup" class="popup">
+
+<div class="popup-content">
+
+<span class="close">&times;</span>
+
+<h2>Por que nos escolher?</h2>
+
+<ul>
+<li>✔ Taxas reduzidas</li>
+<li>✔ Aprovação rápida</li>
+<li>✔ Parcelas fixas</li>
+<li>✔ Atendimento humanizado</li>
+</ul>
+
+<a href="#simulacao" class="btn-popup"
+onclick="document.getElementById('popup').classList.remove('show')">
+Simular agora
+</a>
+
+</div>
+
+</div>
+
+
+<header>
+
+<div class="logo">
+<img src="img/logo.png">
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Empréstimo consignado rápido e seguro</h1>
+
+<p>Simule seu crédito consignado em poucos segundos e fale com um consultor especializado.</p>
+
+<div class="buttons">
+
+<a href="#simulacao" class="btn btn-green">Simular agora</a>
+
+<button class="btn btn-outline" onclick="whatsappContato()">
+Falar no WhatsApp
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+<img src="img/computador.png" alt="Simulação de empréstimo">
+</div>
+
+</section>
+
+
+<div class="benefits">
+
+<div class="benefit-card">
+<div class="icon">💰</div>
+<div>
+<strong>Taxas baixas no empréstimo consignado</strong>
+<p>Trabalhamos com as melhores taxas de juros do mercado,parcelas acessíveis e condições vantajosas </p>
+</div>
+</div>
+
+<div class="benefit-card">
+<div class="icon">⚡</div>
+<div>
+<strong>Aprovação rápida e sem burocracia</strong>
+<p>Simule seu empréstimo consignado online e receba resposta em minutos.</p>
+</div>
+</div>
+
+<div class="benefit-card">
+<div class="icon">📊</div>
+<div>
+<strong>Parcelas fixas e previsíveis</strong>
+<p>Desconto direto na folha com total controle das parcelas.</p>
+</div>
+</div>
+
+<div class="benefit-card">
+<div class="icon">🤝</div>
+<div>
+<strong>Atendimento especializado</strong>
+<p>Consultores prontos para ajudar você a conseguir o melhor crédito.</p>
+</div>
+</div>
+
+</div>
+
+
+<section id="simulacao" class="simulator">
+
+<h2>Simule seu Empréstimo Consignado</h2>
+
+<div class="simulator-box">
+
+<select id="tipoCliente">
+<option>Tipo de cliente (Selecione)</option>
+<option>Servidor Público</option>
+<option>Beneficiário do INSS</option>
+<option>CLT</option>
+
+</select>
+
+<input type="text" id="valorLiberar" placeholder="Valor para liberar: (Exemplo: R$ 10.000,00)">
+<input type="text" id="valorParcela" placeholder="Valor de parcela: (Exemplo: R$ 600,00)">
+
+<select id="prazo">
+<option>Prazo das parcelas (Selecione)</option>
+<option>3x</option>
+<option>6x</option>
+<option>12x</option>
+<option>24x</option>
+<option>36x</option>
+<option>48x</option>
+<option>60x</option>
+<option>72x</option>
+<option>84x</option>
+<option>96x</option>
+<option>108x</option>
+<option>120x</option>
+</select>
+
+
+
+</div>
+
+</section>
+
+<div class="btn-center">
+  <button type="button" onclick="whatsappSimulacao()">
+    Continuar atendimento
+  </button>
+</div>
+
+<section class="legal-warning">
+
+<p>
+<strong>Aviso Importante:</strong> A ProConsig não realiza qualquer tipo de cobrança antecipada para análise,
+simulação ou liberação de crédito. Nosso atendimento e serviço de intermediação são totalmente
+<strong>gratuitos para o cliente</strong>.
+</p>
+
+<p>
+De acordo com a legislação brasileira, é proibido cobrar valores antecipados para liberação
+de empréstimos ou financiamentos. Caso alguém solicite pagamento em nome da empresa,
+desconfie e entre em contato conosco imediatamente.
+</p>
+
+</section>
+
+
+<footer>
+
+<div class="footer-top">
+
+  <div class="footer-box">
+    <h4>Razão Social</h4>
+    <p>ProConsig Soluções Financeiras Ltda</p>
+  </div>
+
+  <div class="footer-box">
+    <h4>CNPJ</h4>
+    <p>60.138.845/0001-70</p>
+  </div>
+
+  <div class="footer-box">
+    <h4>Localização</h4>
+    <p>Rua João Manuel da Silva, 1413 - Areias</p>
+    <p>Santa Catarina - Brasil</p>
+  </div>
+
+<div class="footer-bottom">
+  <p>© 2026 ProConsig Soluções Financeiras</p>
+</div>
+
+</footer>
+
+
+<script>
+
+window.onload = function(){
+
+const popup = document.getElementById("popup");
+const closeBtn = document.querySelector(".close");
+
+setTimeout(() => {
+popup.classList.add("show");
+}, 500);
+
+setTimeout(() => {
+popup.classList.remove("show");
+}, 3500);
+
+closeBtn.addEventListener("click", function(){
+popup.classList.remove("show");
+});
+
+};
+
+</script>
+
+
+<script>
+
+function whatsappContato(){
+
+let mensagem = `Olá! Encontrei o site da ProConsig e gostaria de falar com um consultor sobre empréstimo consignado.
+
+Poderiam me ajudar com mais informações?`;
+
+let numero = "5548992171575";
+
+let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+
+window.open(url, "_blank");
+
+}
+
+</script>
+
+
+<script>
+function formatarMoeda(input) {
+  input.addEventListener("input", function(e) {
+    let valor = e.target.value;
+
+    // remove tudo que não é número
+    valor = valor.replace(/\D/g, "");
+
+    // transforma em dinheiro
+    valor = (valor / 100).toFixed(2);
+
+    // troca ponto por vírgula
+    valor = valor.replace(".", ",");
+
+    // adiciona separador de milhar
+    valor = valor.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+    e.target.value = "R$ " + valor;
+  });
+}
+
+// aplica nos dois campos
+formatarMoeda(document.getElementById("valorLiberar"));
+formatarMoeda(document.getElementById("valorParcela"));
+</script>
+
+<a href="https://wa.me/5548992171575?text=Olá,%20pode%20simular%20um%20empréstimo%20para%20mim?" 
+   class="whatsapp-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+function whatsappSimulacao(){
+
+  let tipo = document.getElementById("tipoCliente")?.value || "";
+  let valorLiberar = document.getElementById("valorLiberar")?.value || "";
+  let valorParcela = document.getElementById("valorParcela")?.value || "";
+  let prazo = document.getElementById("prazo")?.value || "";
+
+  let mensagem = `Olá! Acabei de fazer uma simulação no site da ProConsig.
+
+Tipo de cliente: ${tipo}
+Valor para liberar: ${valorLiberar}
+Valor da parcela: ${valorParcela}
+Prazo: ${prazo}
+
+Gostaria de saber mais sobre a proposta.`;
+
+  let url = "https://wa.me/5548992171575?text=" + encodeURIComponent(mensagem);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
